@@ -1,0 +1,80 @@
+#container-left {
+    width: 600px;
+    height: 750px;
+    background-color: #99CC99;  
+    float: left;
+    margin-right: 3px;
+    overflow: scroll;
+
+}
+
+#container-right {
+    width: 380px;
+    height: 750px;
+    background-color: #AA88AA;
+    float: left;
+    overflow: scroll;
+}
+
+
+#adatoktavolsag,
+#adatokosszevonas,
+#zhtablazat-euk, #zhtablazat-xy {
+    border-collapse: collapse;
+}
+
+#zhtablazat-euk, #zhtablazat-xy {
+    width: 100%;
+}
+
+#adatoktavolsag td,
+#adatokosszevonas td,
+#zhtablazat-euk td, #zhtablazat-xy td {
+    border: 1px solid yellow;
+}
+
+
+tr:hover td {
+  background-color: #FFFAF0; color: #000;
+}
+
+/*
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    overflow: hidden;
+    z-index: 1;
+}
+
+td, th, .row, .col, .ff-fix {
+    cursor: pointer;
+    
+    position: relative;
+}
+
+td:hover::before,
+.row:hover::before,
+.ff-fix:hover::before { 
+    background-color: #ffa;
+    content: '\00a0';  
+    height: 100%;
+    left: -5000px;
+    position: absolute;  
+    top: 0;
+    width: 10000px;   
+    z-index: -1;        
+}
+
+td:hover::after,
+.col:hover::after,
+.ff-fix:hover::after { 
+    background-color: #ffa;
+    content: '\00a0';  
+    height: 10000px;    
+    left: 0;
+    position: absolute;  
+    top: -5000px;
+    width: 100%;
+    z-index: -1;        
+}
+*/

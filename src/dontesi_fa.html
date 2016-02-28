@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Döntési fa algoritmus tanulását segítő oktató oldal.">
+    <meta name="author" content="Szemere László, Budapest 2014">
+
+    <title>Döntési fa</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="res/bootstrap-3.1.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="res/_klaszterezes.css">
+
+    <style>
+      .deaktivalt_szurke {
+          color: #999999;
+      }
+    </style>
+
+  </head>
+
+  <body onLoad="OldalBetoltve();" onResize="OldalAtmeretezve();">
+
+    <div class="container">
+      <div class="row">
+        <div class="alert alert-info" id="ID_segitoszoveg">
+            <!-- A JavaScript tölti fel. Hatékonyabb lenne ide írni az első verziót, de ha nem jelenik meg jól jelzi, hogy gond van. -->
+        </div>
+      </div>
+    </div>
+
+<!-- Kezdőoldal -->
+    <div class="container" id="ID_kezdooldal">
+
+        <div class="row">
+
+            <div class="col-xs-2"></div>
+
+            <div class="col-xs-4">
+                <div class="panel panel-primary">
+                      <!-- Default panel contents -->
+                      <div class="panel-heading">Új feladat indítása</div>
+<!--                      <div class="panel-body">
+                        Jelenleg ezek a feldadatok érhetőek el a rendszerben. Ezek bővítése a megfelelő adat.js fájl letöltésével lehetséges.
+                      </div>
+-->
+
+                      <!-- List group -->
+                      <div class="list-group" id="ID_ujfeladatlista">
+                        <a href="#" class="list-group-item">Betöltés folyamatban...</a>
+                      </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-4">
+
+                <div class="panel panel-primary">
+                      <!-- Default panel contents -->
+                      <div class="panel-heading">Korábban félbehagyott feladat folytatása</div>
+<!--                     <div class="panel-body">
+                        Munka közben a rendszer automatikusan menti, hogy hol tartasz egy feladattal, az így félbehagyott feladatokhoz bármikor visszatérhetsz.
+                      </div>
+-->
+                      <!-- List group -->
+                      <div class="list-group" id="ID_mentettfeladatok">
+                        <a href="#" class="list-group-item">Betöltés folyamatban...</a>
+                      </div>
+                </div>
+            </div>
+
+            <div class="col-xs-2"></div>
+
+        </div>
+
+    </div><!-- Kezdőoldal -->
+
+
+
+<!-- Feladat oldal -->
+    <div class="container" id="ID_feladat">
+
+          <div id="container-left">
+
+              <div id="canvas_container">
+                <canvas id="canvas" width="200" height="200" >
+                    A böngésződ nem támogatja a HTML5 canvas használatát.
+                </canvas>
+                <div id="canvas_controls">
+                    <div class="glyphicon glyphicon-plus" onclick="CanvasScale(2)"></div>
+                    <div class="glyphicon glyphicon-minus" onclick="CanvasScale(0.5)"></div>
+                </div>
+              </div>
+
+
+              <div id="container-left-data">
+                <h3 id="adatmatrix_cim">Adatmátrix</h3>
+                <small>
+                  <table id="adatmatrixtabla" class="table table-bordered table-hover table-condensed"></table>
+                </small>
+<!--
+                <h3>Euklideszi távolság</h3>
+                <small>
+                  <table id="zhtablazat-euk" class="table table-bordered table-hover table-condensed"></table>
+                </small>
+
+                <hr />
+                <h3>X+Y távolság</h3>
+                <small>
+                    <table id="zhtablazat-xy" class="table table-bordered table-hover table-condensed"></table>
+                </small>
+-->
+              </div>
+
+          </div>
+
+
+
+          <div id="container-right">
+
+            <div id="container-right-select-points">
+                <h3>Levél csomópont kiválasztás</h3>
+                <small>
+                    <table id="level_csomopont_kivalasztas" class="table table-bordered table-hover table-condensed"><tr><td>hello</td></tr></table>
+                </small>
+            </div>
+
+
+            <div id="container-right-select-attributes">
+                <h3 id="attributum_kivalasztas_cim" >Attribútum kiválasztás</h3>
+                <small>
+                    <table id="attributum_kivalasztas" class="table table-bordered table-hover table-condensed"><tr><td>hello</td></tr></table>
+                </small>
+            </div>
+
+
+          </div>
+
+    </div><!-- Feladat oldal -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="res/jquery-1.11.0.min.js"></script>
+    <script src="res/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript" src="data_dontesi_fa.js"></script>
+    <script type="text/javascript" src="res/_dontesifa.js"></script>
+  </body>
+</html>
